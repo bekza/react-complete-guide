@@ -1,7 +1,12 @@
 import React from "react";
 
-const person = () => {
-  return <h3>This is imported paragraph.</h3>
+const person = (props) => {
+  return (
+    <div>
+      <p onClick={props.click}>Hello, My name is {props.name} and I'm {props.age} years old. </p>
+      <p>{props.children}</p>
+    </div>
+  )
 }
 
 export default person;
